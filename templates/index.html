@@ -1,23 +1,157 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
 </head>
- 
+
 <body>
-    <form action="render" method="GET">
-        <div>
-          <label for="sentence">sentence</label>
-          <input name="sentence" id="sentence" value="">
-        </div>
-        <div>
-          <button>Send</button>
-        </div>
-      </form>
-      {% if image %}
-      <div>
-        {{ image }}
-      </div>
-      {% endif %}
+  <form action="render" method="GET">
+    <div>
+      <label for="sentence">sentence</label>
+      <input name="sentence" id="sentence" value="">
+    </div>
+    <div>
+      <button>Send</button>
+    </div>
+  </form>
+  {% if image %}
+  <div>
+    {{ image }}
+  </div>
+  {% endif %}
+  <div class="flex">
+    <div>
+      <p>品詞</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ラベル</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ADJ</td>
+            <td>形容詞(adjective)</td>
+          </tr>
+          <tr>
+            <td>ADP</td>
+            <td>設置詞(adposition)</td>
+          </tr>
+          <tr>
+            <td>ADV</td>
+            <td>副詞(adverb)</td>
+          </tr>
+          <tr>
+            <td>AUX</td>
+            <td>助動詞(auxiliary)</td>
+          </tr>
+          <tr>
+            <td>CONJ</td>
+            <td>接続詞(conjunction)</td>
+          </tr>
+          <tr>
+            <td>CCONJ</td>
+            <td>等位接続詞(coordinating conjunction)</td>
+          </tr>
+          <tr>
+            <td>DET</td>
+            <td>限定詞(determiner)</td>
+          </tr>
+          <tr>
+            <td>INTJ</td>
+            <td>間投詞、感嘆詞(interjection)</td>
+          </tr>
+          <tr>
+            <td>NOUN</td>
+            <td>名詞(noun)</td>
+          </tr>
+          <tr>
+            <td>NUM</td>
+            <td>数詞(numeral)</td>
+          </tr>
+          <tr>
+            <td>PART</td>
+            <td>助詞(particle)</td>
+          </tr>
+          <tr>
+            <td>PRON</td>
+            <td>代名詞(pronoun)</td>
+          </tr>
+          <tr>
+            <td>PROPN</td>
+            <td>固有名詞(proper noun)</td>
+          </tr>
+          <tr>
+            <td>PUNCT</td>
+            <td>句読点(punctuation)</td>
+          </tr>
+          <tr>
+            <td>SCONJ</td>
+            <td>従属接続詞(subordinating conjunction)</td>
+          </tr>
+          <tr>
+            <td>SYM</td>
+            <td>シンボル(symbol)</td>
+          </tr>
+          <tr>
+            <td>VERB</td>
+            <td>動詞(verb)</td>
+          </tr>
+          <tr>
+            <td>X</td>
+            <td>他(other)</td>
+          </tr>
+        </tbody>
+      </table>  
+    </div>
+    <div>
+      <p>節</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ラベル</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>advervial clause modifier (advcl)</td>
+            <td>becaseu, whenなどの従位接続詞に導かれる副詞節</td>
+          </tr>
+          <tr>
+            <td>relative clause modifier (relcl)</td>
+            <td>which, whoなどの関係代名詞に導かれる関係代名詞節</td>
+          </tr>
+          <tr>
+            <td>clausal complement (ccomp)</td>
+            <td>thatで導かれる、主語や目的語になる節</td>
+          </tr>
+          <tr>
+            <td>open clausal complement (xcomp)</td>
+            <td>述部（目的語など）でccompと同じ役割を果たすが主語が示されていないもの</td>
+          </tr>
+          <tr>
+            <td>clausal subject (csubj)</td>
+            <td>ccompが主語の位置に来たもの</td>
+          </tr>
+          <tr>
+            <td>adnominal clause (acl)</td>
+            <td>名詞句を修飾する動詞句</td>
+          </tr>
+        </tbody>
+      </table>  
+    </div>
+  </div>
 </body>
+<style>
+  .flex {
+    display: flex;
+  }
+  .table {
+    border: solid 1px;
+  }
+</style>
+
 </html>
